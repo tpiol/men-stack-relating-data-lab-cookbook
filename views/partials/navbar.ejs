@@ -1,9 +1,10 @@
 <nav class="navbar is-light" role="navigation" aria-label="main navigation">
-  <div class="navbar-menu is-active">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/">Home</a>
-      <a class="navbar-item" href="/songs">View All Songs</a>
-      <a class="navbar-item" href="/songs/new">Add a Song</a>
-    </div>
-  </div>
+  <a href="/">Home</a>
+  <% if(user) { %>
+  <a href="/users/<%=user._id%>/foods">View my Pantry</a>
+  <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+  <a href="/auth/sign-in">Sign In</a>
+  <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
 </nav>

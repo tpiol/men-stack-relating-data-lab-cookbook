@@ -7,8 +7,8 @@ const User = require("../models/user.js")
 
 // GET /users/:userId/foods
 
-router.get('/', (req, res) => {
-  res.render('foods/index.ejs');
+router.get("/", (req, res) => {
+  res.render("foods/index.ejs");
 });
 
 

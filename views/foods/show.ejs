@@ -8,6 +8,10 @@
   <body>
       <%- include("../partials/navbar.ejs") %>
     <h1><%= pantry.name %></h1>
+    <p>The food in your pantry is <%= pantry.name %></p>
+    <a href="/users/<%= user._id %>/foods/<%= pantry._id %>/edit">
+      Edit this Food 
+    </a>
      <a href="/users/<%= user._id %>/foods/new">Add a New Food Item</a>
   </body>
 </html>

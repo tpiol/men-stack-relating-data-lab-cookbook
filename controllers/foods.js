@@ -76,4 +76,18 @@ router.get("/:foodsId/edit", async (req, res) => {
   }
 })
 
+
+// PUT /users/:userId/foods/:foodsId
+router.put("/:foodsId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const food = currentUser.pantry.id(req.params.foodsId);
+    food.set(req.body);
+    await currentUser.save();
+    res.redirect("/")
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+})
 module.exports = router;

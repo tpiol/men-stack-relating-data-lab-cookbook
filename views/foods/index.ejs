@@ -8,8 +8,11 @@
   <body>
       <%- include("../partials/navbar.ejs") %>
     <h1>Welcome to my Pantry</h1>
-
      <a href="/users/<%= user._id %>/foods/new">Add a New Food Item</a>
-     
+     <ul>
+      <% pantry.forEach((foods) => { %>
+        <li><%= foods.name %></li>
+        <% }); %>
+     </ul>
   </body>
 </html>

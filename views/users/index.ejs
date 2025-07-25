@@ -13,7 +13,7 @@
 
     <ul>
       <% allUsers.forEach((user)=>{ %>
-        <a href="">
+        <a href="/users/<%= user._id %>">
           <li>
             <%= user.username %>
           </li>

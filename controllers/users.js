@@ -16,4 +16,9 @@ router.get("/", async (req, res) => {
 }
 });
 
+// users/show
+router.get("/:userId", (req, res) => {
+    res.send(`Here is your user: ${req.params.userId}`)
+});
+
 module.exports = router;

@@ -14,5 +14,10 @@
         <li><%= foods.name %></li>
         <% }); %>
      </ul>
+     <form action="/users/<%= user._id %>/foods/<%= pantry._id %>?_method=DELETE"
+      method="POST"
+      >
+    <button type="submit">Delete this Food</button>
+    </form>
   </body>
 </html>
